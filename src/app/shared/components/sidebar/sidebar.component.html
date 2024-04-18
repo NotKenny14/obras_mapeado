@@ -1,0 +1,20 @@
+<div class="sidebar" [ngClass]="{'open': isSidebarOpen, }">
+  <div class="sidebar-header">
+    <h3>Mi Sidebar</h3>
+    <button (click)="toggleSidebar()" class="close-button">&#10005;</button>
+  </div>
+  <ul class="sidebar-menu">
+    <li id="opciones0">
+      <input type="checkbox" id="mapa_general" value="t1"
+        (change)="searchBy2023()">
+      <label for="mapa_general" style="color: #c7c7c7;">Obras 2023</label>
+  </li>
+    <li><a href="#">Configuración</a></li>
+    <!-- Agrega más elementos de menú según sea necesario -->
+  </ul>
+</div>
+<button [ngClass]="{'move-right': isSidebarOpen}"
+  class="btn btn-secondary"
+  (click)="toggleSidebar()">
+    <i class="bi bi-map"></i>
+</button>

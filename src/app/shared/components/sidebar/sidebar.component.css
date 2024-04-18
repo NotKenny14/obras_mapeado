@@ -1,0 +1,65 @@
+.sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: #333;
+  color: #fff;
+  transition: left 0.3s ease;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+}
+
+.sidebar-header h3 {
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px;
+}
+
+.sidebar-menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar-menu li:hover {
+  background-color: #555;
+}
+.move-right {
+  transform: translateX(250px); /* Ajusta el valor según el ancho del sidebar */
+  transition: transform 0.3s ease; /* Agregamos una transición suave para el movimiento */
+}
+
+.close-button {
+  transition: transform 0.3s ease; /* Agregamos una transición suave para el botón */
+}
+
+button {
+  background-color: grey;
+}

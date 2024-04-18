@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://sistemas.xalapa.gob.mx/get_obras_web_2023",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
