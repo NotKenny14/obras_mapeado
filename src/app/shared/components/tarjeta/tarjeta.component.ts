@@ -71,6 +71,21 @@ export class TarjetaComponent implements OnInit {
 
   activarModal() {
     this.apiService.showModal();
+    console.log(this.numObra)
+
+  }
+
+  detallesCard(obra: string): void {
+    this.apiService.getObra(obra).subscribe(
+      (response) => {
+        console.log(response);
+        // Aquí puedes manejar la respuesta y actualizar tu interfaz de usuario según sea necesario
+      },
+      (error) => {
+        console.error('Error al obtener los detalles de la obra:', error);
+        // Aquí puedes manejar el error y mostrar un mensaje al usuario
+      }
+    );
   }
 
 }

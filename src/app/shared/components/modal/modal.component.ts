@@ -13,8 +13,11 @@ export class ModalComponent implements OnInit{
   ngOnInit(): void {
   }
 
+
   cerrarModal() {
       this.apiService.hideModal()
   }
+
+
 
 }
