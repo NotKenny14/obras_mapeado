@@ -33,7 +33,9 @@ shared-tarjeta {
 
 shared-modal {
   position: absolute;
-  top: 70%;
-  left: 50%;
+  top: 100%;
+  left: 60%;
   transform: translate(-50%, -50%);
+  overflow-y: auto; /* Agrega desplazamiento vertical automáticamente si es necesario */
 }
+

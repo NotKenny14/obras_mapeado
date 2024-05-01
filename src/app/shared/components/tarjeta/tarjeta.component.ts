@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../service/apiData.service';
+import { ModalService } from '../../service/modal-service.service';
 
 @Component({
   selector: 'shared-tarjeta',
@@ -16,7 +17,7 @@ export class TarjetaComponent implements OnInit {
   public colonias: string = '';
   public porcentajeAvance: string = '';
 
-  constructor( private apiService: ApiService ) {
+  constructor( private apiService: ApiService, private modalService: ModalService ) {
     this.apiService.getData$('numObra').subscribe(numObra => {
       this.numObra = numObra;
     });
@@ -71,15 +72,13 @@ export class TarjetaComponent implements OnInit {
 
   activarModal() {
     this.apiService.showModal();
-    console.log(this.numObra)
 
   }
 
   detallesCard(obra: string): void {
-    this.apiService.getObra(obra).subscribe(
+    this.modalService.getObra(obra).subscribe(
       (response) => {
-        console.log(response);
-        // Aquí puedes manejar la respuesta y actualizar tu interfaz de usuario según sea necesario
+        this.modalService.setDetallesObra(response);
       },
       (error) => {
         console.error('Error al obtener los detalles de la obra:', error);

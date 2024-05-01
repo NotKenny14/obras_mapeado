@@ -26,12 +26,7 @@ export class ApiService {
     return this.getMapa2023Request(url);
   }
 
-  getObra(numObra: string): Observable<any> {
-    const url = `${this.serv}get_obra2023`;
-    const formData = new FormData();
-    formData.append('num_obra', numObra);
-    return this.httpClient.post(url, formData);
-  }
+
 
 
 
