@@ -109,14 +109,24 @@ export class ModalComponent implements OnInit{
   }
 
   currentIndex: number = 0;
-  mostrarDatos: boolean = true;
+  isBlue: boolean = false;
+
 
   siguienteLi() {
     this.currentIndex += 1;
+    this.isBlue = true; // Cambiamos el valor a true para cambiar el color
+
+
   }
 
   anteriorLi() {
     this.currentIndex -= 1;
+    this.isBlue = false;
+
+  }
+
+  botonesOL(index: number) {
+    this.currentIndex = index;
   }
 
 

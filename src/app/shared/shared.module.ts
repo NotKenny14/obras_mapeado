@@ -6,6 +6,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { InicioPageComponent } from './pages/inicio-page/inicio-page.component';
 import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { SearchBoxComponent } from './components/search-box/search-box.component';
 
 
 
@@ -15,7 +16,8 @@ import { ModalComponent } from './components/modal/modal.component';
     SidebarComponent,
     InicioPageComponent,
     TarjetaComponent,
-    ModalComponent
+    ModalComponent,
+    SearchBoxComponent
   ],
   imports: [
     CommonModule,

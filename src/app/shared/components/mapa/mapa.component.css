@@ -1,6 +1,6 @@
 .map {
   width: 100%;
-  height: 1114px; /* Puedes ajustar esta altura según tus necesidades */
+  height: 1000px; /* Puedes ajustar esta altura según tus necesidades */
 }
 
 .map-container {
@@ -34,8 +34,16 @@ shared-tarjeta {
 shared-modal {
   position: absolute;
   top: 100%;
-  left: 60%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  overflow-y: auto; /* Agrega desplazamiento vertical automáticamente si es necesario */
+  z-index: 9999; /* Asegura que el modal esté por encima de otros elementos */
+
 }
 
+shared-search-box {
+  position: absolute;
+  bottom: 450px;
+  right: 900px; /* Ajusta el valor según sea necesario */
+  z-index: 9998; /* Asegura que el modal esté por encima de otros elementos */
+
+}

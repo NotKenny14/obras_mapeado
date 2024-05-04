@@ -1,0 +1,5 @@
+.modal-container {
+  max-width: 50rem; /* Establece el ancho máximo del modal */
+  height: 58rem; /* Establece la altura del modal */
+  overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido excede la altura */
+}
