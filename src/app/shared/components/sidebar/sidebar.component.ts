@@ -19,7 +19,6 @@ export class SidebarComponent {
   public isSidebarOpen: boolean = false;
   public mapas: SearchResponse[] = [];
   public mapa_general: boolean = false;
-  public guarda2023:any [] = [];
 
   @Output() numObraChange = new EventEmitter<string>();
 
@@ -50,8 +49,6 @@ export class SidebarComponent {
 
           //this.pintarPuntos2(mapa)
           this.apiService.pintarPuntos(mapa)
-          this.guarda2023 = mapa;
-          console.log(this.guarda2023)
 
         }
       },

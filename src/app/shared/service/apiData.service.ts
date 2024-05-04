@@ -36,13 +36,19 @@ export class ApiService {
   }
 
   searchMapa2023(): Observable<SearchResponse[]> {
-    if(this.guarda2023 == false){
     const url = `${this.serv}get_obras_web_2023`
-    this.guarda2023 = url;
+
+    this.httpClient.get(url).subscribe(
+      (data: any) => {
+        this.guarda2023 = data;
+      }
+    );
+
+    if(this.guarda2023 == false){
     return this.getMapa2023Request(url);
     }
     else {
-      const url2 = this.guarda2023;
+      let url2 = this.guarda2023;
       return this.getMapa2023Request(url2);
     }
 
@@ -503,7 +509,7 @@ export class ApiService {
 
   searchTerm(term: string) {
     console.log(term)
-   const datosFiltrados = this.guarda2023.find((item: any) => item.propiedad === '2023300870209');
+   const datosFiltrados = this.guarda2023.find((item: any) => item.propiedad === term);
    console.log(datosFiltrados)
   }
 
